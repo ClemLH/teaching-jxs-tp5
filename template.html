@@ -1,0 +1,36 @@
+ <div class="container">
+        <h1>Pokésir</h1>
+
+
+        <!-- Search -->
+        <div ng-controller="controllerPokemon">
+
+              <input type="text" ng-model="id" name=""/>
+
+        {{id}}  
+
+           
+            <select ng-model="choix" id="monselect">
+
+             <option ng-repeat="pokemon in list | filter:filtre" value="{{pokemon.resource_uri}}">
+             {{pokemon.name}}</option>
+    
+            </select>
+
+             <input type="text" ng-model="filtre" name=""/>
+
+            <button ng-click="valider(choix)">Go!</button>
+            
+        
+            </div>
+        <div ng-controller="controllerDisplayPokemon">
+
+            {{name}}
+            {{id}}
+
+            <img src="{{urlImage.front_default}}" alt=""/>
+            
+            
+        <!-- Pokémon information -->
+           
+        </div></div>
